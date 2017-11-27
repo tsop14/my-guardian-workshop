@@ -1,6 +1,6 @@
 function getInterestingFields(contentItem){
     //console.log(contentItem);
-    var mainImage = getImageFromElements(contentItem.elements)
+    var mainImage = getImage(contentItem);
     return {
         headline: contentItem.fields.headline,
         trailText: contentItem.fields.trailText,
@@ -13,8 +13,8 @@ function addRowOfNews(rowSubject, numberOfItems){
     return addContentList(rowSubject, "http://content.guardianapis.com/search?q="+contentApiQuery, numberOfItems);
 }
 
-// This adds the top 3 articles from a content api search. Try changing "Harry Potter" to something else.
-addRowOfNews("Harry Potter", 3)
+// This adds the top 3 articles from a content api search. Try changing "Technology" to something else.
+addRowOfNews("Technology", 3)
 
 addRowOfNews("Coding", 3)
 
